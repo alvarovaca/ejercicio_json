@@ -54,8 +54,13 @@ def EncontrarAmigos(nombre,datos):
 
 #Ejercicio 5.
 
-def OpenStreetMap(nombre,apellido,datos):
-    
+def OpenStreetMap(nombre,apellido,zoom,datos):
+    url=[]
+    for i in datos:
+        if i["name"]["first"]==nombre and i["name"]["last"]==apellido:
+            url.append("http://www.openstreetmap.org/#map="+zoom+"/"+i["latitude"]+"/"+i["longitude"])
+            break
+    return url
 
 #Funciones extra.
 
