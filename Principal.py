@@ -88,15 +88,18 @@ while True:
         print("-------------")
         print("OPENSTREETMAP")
         print("-------------")
-        print()
-        nombre=input("Introduce el nombre de la persona a buscar: ")
-        apellido=input("Introduce el apellido de la persona a buscar: ")
-        zoom=input("Introduce el zoom con el que deseas ver el OpenStreetMap: ")
-        print()
-        if len(OpenStreetMap(nombre,apellido,zoom,datos))>0:
-            print(OpenStreetMap(nombre,apellido,zoom,datos)[0])
-        else:
-            print("No se ha encontrado la persona introducida.")
+        while True:
+            print()
+            nombre=input("Introduce el nombre de la persona a buscar: ")
+            if nombre==" ":
+                break
+            apellido=input("Introduce el apellido de la persona a buscar: ")
+            zoom=input("Introduce el zoom con el que deseas ver el OpenStreetMap: ")
+            print()
+            if len(OpenStreetMap(nombre,apellido,zoom,datos))>0:
+                print(OpenStreetMap(nombre,apellido,zoom,datos)[0])
+            else:
+                print("No se ha encontrado la persona introducida.")
         print()
     elif opcion==6:
         print()
