@@ -99,7 +99,7 @@ while True:
             if len(OpenStreetMap(nombre,apellido,zoom,datos))>0:
                 print(OpenStreetMap(nombre,apellido,zoom,datos)[0])
             else:
-                print("No se ha encontrado la persona introducida.")
+                print("No se ha encontrado el OpenStreetMap de la persona introducida.")
         print()
     elif opcion==6:
         print()
